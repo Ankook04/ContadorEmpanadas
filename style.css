@@ -2,6 +2,7 @@
     transition: .8s;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);¡
   }
 html {
     height: 100%;
