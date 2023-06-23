@@ -402,6 +402,36 @@ function cambiarHamburguesa(){
     new Audio('sonido_final.mp3').play();
 
     btnReinicio.classList.remove('none')
+    if (contador0.innerHTML==0){
+        hamburguesa0.classList.add('none')
+    }
+    if(contador1.innerHTML==0){
+        hamburguesa1.classList.add('none')}
+    if (contador0.innerHTML==0){
+        hamburguesa0.classList.add('none')
+    }
+    if(contador2.innerHTML==0){
+        hamburguesa2.classList.add('none')}
+    if (contador5.innerHTML==0){
+        hamburguesa5.classList.add('none')
+    }
+    if(contador3.innerHTML==0){
+        hamburguesa3.classList.add('none')}
+    if (contador4.innerHTML==0){
+        hamburguesa4.classList.add('none')
+    }
+    if(contador6.innerHTML==0){
+        hamburguesa6.classList.add('none')}
+    if (contador7.innerHTML==0){
+        hamburguesa7.classList.add('none')
+    }
+    if(contador8.innerHTML==0){
+        hamburguesa8.classList.add('none')}
+    if(contador9.innerHTML==0){
+        hamburguesa9.classList.add('none')}
+    if(contador10.innerHTML==0){
+        hamburguesa10.classList.add('none')}
+    
 }
 // btnReinicio.addEventListener('click',()=>{
 //     pregunta=prompt("Estas Seguro?")
