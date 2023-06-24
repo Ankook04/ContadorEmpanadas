@@ -342,6 +342,12 @@ var hamburguesa7=document.getElementById('hamburguesa-7')
 var hamburguesa8=document.getElementById('hamburguesa-8')
 var hamburguesa9=document.getElementById('hamburguesa-9')
 var hamburguesa10=document.getElementById('hamburguesa-10')
+var input=document.getElementById('input-precio')
+var precioFinal=document.getElementById('precio-final')
+
+var contadorPrecio=0
+var total=document.getElementById('total')
+var iconoDinero=document.getElementById('cash')
 function cambiarHamburguesa(){
     // hamburguesa0.style.background="white"
     mas0.classList.add('none')
@@ -366,9 +372,8 @@ function cambiarHamburguesa(){
     menos8.classList.add('none')
     menos9.classList.add('none')
     menos10.classList.add('none')
-    hamburguesa0.classList.add('container-hamburguesas_div__resumen')
-    
 
+    hamburguesa0.classList.add('container-hamburguesas_div__resumen')
     hamburguesa1.classList.add('container-hamburguesas_div__resumen' )
     hamburguesa2.classList.add('container-hamburguesas_div__resumen')
     hamburguesa3.classList.add('container-hamburguesas_div__resumen')
@@ -401,6 +406,28 @@ function cambiarHamburguesa(){
     btnEnviar.classList.add('none','transition_02s')
     new Audio('sonido_final.mp3').play();
 
+    // num0=contador0.innerHTML
+    // num1=contador0.innerHTML
+    // num2=contador0.innerHTML
+    // num3=contador0.innerHTML
+    // num4=contador0.innerHTML
+    // num5=contador0.innerHTML
+    // num6=contador0.innerHTML
+    // num7=contador0.innerHTML
+    // num8=contador0.innerHTML
+    // num9=contador0.innerHTML
+    // num10=contador0.innerHTML
+    
+    // lista=[num0,num1,num3]
+    // for(num in lista){
+    //     contadorPrecio+=parseInt(num)
+    //     console.log(contadorPrecio)
+    // }
+
+
+    
+
+
     btnReinicio.classList.remove('none')
     if (contador0.innerHTML==0){
         hamburguesa0.classList.add('none')
@@ -431,8 +458,38 @@ function cambiarHamburguesa(){
         hamburguesa9.classList.add('none')}
     if(contador10.innerHTML==0){
         hamburguesa10.classList.add('none')}
+    valor=input.value
+    input.classList.add('none')
+    
+    var precio=contadorGeneral.innerHTML*valor
+    if(precio>0){
+        precioFinal.innerHTML= `${precio}`
+        
+    }
+    else{
+        precio=1
+        console.log(total)
+        total.style.display="none"
+        iconoDinero.style.display="none"
+        precioFinal.style.color="#e27575"
+        precioFinal.style.fontSize="2rem"
+        precioFinal.style.lineHeight="2rem"
+        precioFinal.innerHTML= `No Ingresaste el monto de cada empanada`
+        
+
+    }
+    
+
+    total.classList.remove('none')
+    iconoDinero.classList.remove('none')
+    
     
 }
+
+
+iconoDinero.classList.add('none')
+total.classList.add('none')
+
 // btnReinicio.addEventListener('click',()=>{
 //     pregunta=prompt("Estas Seguro?")
 //     pregunta.lower()

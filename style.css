@@ -2,7 +2,7 @@
     transition: .8s;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);¡
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 html {
     height: 100%;
@@ -87,7 +87,7 @@ html {
     text-align: center;
     text-shadow: var(--shadow-color) 0 0 0.5rem;
 }
-#boton-inicio,#boton-enviar,#boton-reinicio{
+#boton-inicio,#boton-enviar,#boton-reinicio,#input-precio{
     font-size: 1.5rem;
     padding: 1rem;
     border: var(--border-color) 2px solid;
@@ -96,6 +96,22 @@ html {
     color:var(--main-text-color);
     cursor: pointer;
 }
+#input-precio{
+    text-align: center;
+}
+#input-precio::placeholder{
+    text-align: center;
+    color: var(--border-color);
+    opacity: 0.8;
+
+}
+/* #input-precio:hover{
+    color: var(--border-color);
+    opacity: 0.8;
+    color:rgb(254, 22, 22) 5px solid; 
+
+
+} */
 #footer{
     display: flex;
     flex-direction: column;
@@ -122,6 +138,7 @@ img{
     height: 8rem;
     margin-left: 5rem;
     cursor: pointer;
+    margin-right: 3%;
 }
 #contador-titulo{
     font-family: sans-serif;
@@ -300,8 +317,25 @@ h3{
     color:var(--main-text-color);
     font-size: 5rem;
 }
+#total{
+    margin: 0;
+}
+#container-dinero{
+    display: flex;
+}
 
-
+#precio-final,#cash{
+    margin: 0;
+    text-shadow: var(--shadow-color) 0 0 0.5rem;
+    font-size: 5rem;
+}
+#precio-final{
+    text-align: center;
+}
+#cash{
+    padding-right: 0;
+    color: var(--verde);
+}
 
 
 
@@ -371,6 +405,7 @@ h3{
         font-size: 3rem;
 
     }
+    
 
 
 }
@@ -428,6 +463,12 @@ h3{
         }
         h3{
             font-size: 2rem;
+        }
+        #contador-general, #precio-final,#cash{
+            font-size: 4rem;
+        }
+        #precio-final,#cash{
+            margin: 0;
         }
 
     }
@@ -532,10 +573,11 @@ h3{
             margin: 0;
         }
         #contador-general{
-            font-size: 4rem;
-
+            font-size: 2.5rem;
             margin: 0;
-
+        }
+        #precio-final,#cash{
+            font-size: 2.5rem;
         }
     }
 @media (max-width:340px){
@@ -559,4 +601,10 @@ h3{
         font-size: 2.5rem;
         margin: 0;
     }
+    #precio-final,#cash{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    
 }
